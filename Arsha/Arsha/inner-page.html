@@ -92,71 +92,26 @@
 
         <div class="row">
 
-          <template id="top3-posts">
-            <div class="row" data-aos="zoom-in" data-aos-delay="100">
-              <div class="post">
-                <div class="post-title">
-                  <h4>Título</h4>
-                  <span>Fecha</span>
-                </div>
-                <div class="image-container">
-                  <div class="pic"><img src="assets/img/team/Fernando.jpg" class="img-fluid" alt="Titulo"></div>
-                </div>
-                
-                <div class="post-info">
-                  <span>Texto acerca de la publicación</span>
-                </div>
-              </div>
-            </div>
-  
-            <div class="row" data-aos="zoom-in" data-aos-delay="100">
-              <div class="post">
-                <div class="post-title">
-                  <h4>Título</h4>
-                  <span>Fecha</span>
-                </div>
-                <div class="image-container">
-                  <div class="pic"><img src="assets/img/team/Fernando.jpg" class="img-fluid" alt="Titulo"></div>
-                </div>
-                
-                <div class="post-info">
-                  <span>Texto acerca de la publicación</span>
-                </div>
-              </div>
-            </div>
-  
-            <div class="row" data-aos="zoom-in" data-aos-delay="100">
-              <div class="post">
-                <div class="post-title">
-                  <h4>Título</h4>
-                  <span>Fecha</span>
-                </div>
-                <div class="image-container">
-                  <div class="pic"><img src="assets/img/team/Fernando.jpg" class="img-fluid" alt="Titulo"></div>
-                </div>
-                
-                <div class="post-info">
-                  <span>Texto acerca de la publicación</span>
-                </div>
-              </div>
-            </div>
-          </template>
-
-          <div id="insert-top3-posts-blog"></div>
-
-          <!-- JavaScript to insert the template content -->
+          <!-- Top 3 -->
           <script>
-            // Get the template from the template.html file
-            const template = document.querySelector('#top3-posts');
-
-            // Clone the template content
-            const clone = document.importNode(template.content, true);
-
-            // Insert the cloned content into the document
-            document.getElementById('insert-top3-posts-blog').appendChild(clone);
+            // Función para ajustar la altura del iframe según el contenido
+            function ajustarAlturaIframe() {
+              const iframe = document.getElementById('miIframe');
+              if (iframe) {
+                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+              }
+            }
+          
+            // Ajustar la altura del iframe cuando se cargue o redimensione la ventana
+            window.addEventListener('load', ajustarAlturaIframe);
+            window.addEventListener('resize', ajustarAlturaIframe);
           </script>
+          
+          <iframe id="miIframe" src="./top3-posts.html" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
 
-          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <!-- Resto de publicaciones del blog -->
+
+          <div class="row" data-aos-delay="100">
             <div class="post">
               <div class="post-title">
                 <h4>Título</h4>

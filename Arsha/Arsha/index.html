@@ -50,9 +50,10 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#about">¿Quiénes somos?</a></li>
+          <li><a class="nav-link scrollto" href="#team">Actividades</a></li>
+          <li><a class="nav-link scrollto" href="#blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#team">Junta directiva</a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -88,7 +89,7 @@
           <h1>UCppM</h1>
           <h2>Asociación de Programación Competitiva de la Universidad Complutense de Madrid</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
@@ -236,50 +237,37 @@
       </div>
     </section><!-- End Why Us Section -->
 
-    <!-- ======= Skills Section ======= -->
-    <!-- TODO Convertir esto en una preview a un blog-->
-    <section id="skills" class="skills">
-      <div class="container" data-aos="fade-up">
+    <section id="blog" class="blog">
+      <div class="blog-container">
+        <!-- Top 3 -->
+        <style>
+          #miIframe {
+            display: block; /* Ensures the iframe is treated as a block element */
+            margin: 0 auto; /* Center horizontally using auto margins */
+          }
+        </style>
+      
+        <script>
+          // Función para ajustar la altura del iframe según el contenido
+          function ajustarAlturaIframe() {
+            const iframe = document.getElementById('miIframe');
+            if (iframe) {
+              iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+              iframe.style.width = iframe.contentWindow.document.body.scrollWidth + 'px';
+            }
+          }
+      
+          // Ajustar la altura del iframe cuando se cargue o redimensione la ventana
+          window.addEventListener('load', ajustarAlturaIframe);
+          window.addEventListener('resize', ajustarAlturaIframe);
+        </script>
+      
+        <iframe id="miIframe" src="top3-posts.html"  frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+      
+      </div>  
+    </section>
 
-        <div class="row">
-          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/skills.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
 
-          <div id="insert-top3-posts-mainpage"></div>
-
-          <!-- JavaScript to insert the template content -->
-          <script>
-            fetch('inner-page.html')
-            .then(response => response.text())
-            .then(html => {
-                // Insert the fetched HTML content into the current page
-                document.querySelector('#top3-posts') = html;
-                const template = html;
-
-                // Clone the template content
-                const clone = document.importNode(template.content, true);
-
-                // Insert the cloned content into the document
-                document.getElementById('insert-top3-posts-blog').appendChild(clone);
-            })
-            .catch(error => {
-                console.error('Error fetching content:', error);
-            });
-
-          </script>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Skills Section -->
 
 <!-- TODO Quitar todo lo relacionado con la sección de Portfolio, que la he quitado-->
 
@@ -412,9 +400,7 @@
             <h4>¿Te animas?</h4>
             <p>¡Apúntate a la asociación a través del siguiente formulario!</p>
             <!-- TODO Cambiar para que el botón funcione y no haya esa barra blanca-->
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            <a href="#about" class="btn-get-started scrollto">Unirme</a>
           </div>
         </div>
       </div>
