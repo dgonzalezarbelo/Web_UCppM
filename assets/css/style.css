@@ -590,6 +590,11 @@ section {
   }
 }
 
+.clients .img-ajustada {
+  width: 100px;
+  height: 100px;
+}
+
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
@@ -1438,6 +1443,18 @@ section {
   .faq .faq-list {
     padding: 0;
   }
+}
+
+.faq .faq-list a {
+  display: inline;
+  letter-spacing: 0;
+}
+
+#faq-list-4 a {
+  text-decoration: none; /* Elimina la subrayado predeterminado */
+  display: inline; /* Coloca el enlace en línea con el texto */
+  margin: 0; /* Elimina cualquier margen adicional */
+  padding: 0; /* Elimina cualquier relleno adicional */
 }
 
 /*--------------------------------------------------------------
