@@ -38,7 +38,6 @@
 </head>
 
 <body>
-<!-- TODO Hacer todo esto-->
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
@@ -87,7 +86,6 @@
   </section><!-- End Hero -->
 
   <main id="main">
-<!-- TODO Cambiar a las fotos correctas-->
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients section-bg">
       <div class="container">
@@ -124,11 +122,29 @@
         </div>
         <span>
           <div class="row content">
-            <div class="col-lg-6">
-              <p> 
-                <img src="assets/img/fotos_pasadas/voluntarios_y_concursantes_AdaByron.jpeg" class="img-fluid" alt="" style="width: 100%;">
-              </p>
-            </div>
+            <div class="col-lg-6" class="slideshow-container">
+
+              <div class="mySlides">
+                <img src="/assets/img/fotos_pasadas/concurso_navidad_grupal.JPEG" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+
+              <div class="mySlides">
+                <img src="/assets/img/fotos_pasadas/primera_sesion_Fer.jpeg" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+
+              <div class="mySlides">
+                  <img src="/assets/img/fotos_pasadas/CCC_grupal.JPEG" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+          
+              <div class="mySlides">
+                <img src="/assets/img/fotos_pasadas/voluntarios_y_concursantes_AdaByron.jpeg" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+
+              
+
+              <!-- Agrega más divs con clase "mySlides" y coloca tus imágenes dentro -->
+           
+          </div>
             <div class="col-lg-6" class="vertical-center">
               <p>
                 Del nombre puedes intuir que somos <b>programadores compitiendo</b>, ¿pero en qué?
@@ -145,6 +161,25 @@
         
       </div>
     </section><!-- End About Us Section -->
+
+    <script>
+      var slideIndex = 0;
+      carousel();
+  
+      function carousel() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 4000); // Cambia cada 2 segundos (2000 milisegundos)
+      }
+    </script>
 
     <!-- ======= Why Us Section (Actividades) ======= -->
     <section id="why-us" class="why-us section-bg">
@@ -378,8 +413,14 @@
     </section><!-- End Why Us Section -->
 
     <section id="blog" class="blog">
+      <!--
       <a class="twitter-timeline" href="https://twitter.com/UCppM?ref_src=twsrc%5Etfw">Tweets by UCppM</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      -->
+      
+      <!-- Feed de Instagram -->
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-7859f448-85c3-4058-8e35-3d30709f7513" data-elfsight-app-lazy></div>
       <!-- 
       <div class="blog-container">
         
@@ -576,10 +617,10 @@
             <h4>Nuestros enlaces</h4>
             <p>¡Mantente al día a través de los siguientes enlaces!</p>
             <div class="social-links mt-3">
-              <!-- TODO Linkear lo correspondiente a los botones-->
               <a href="https://twitter.com/UCppM" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="https://www.instagram.com/ucppm_/" class="github"><i class="bx bxl-instagram"></i></a>
               <a href="https://github.com/ucppm" class="github"><i class="bx bxl-github"></i></a>
+              <a href="https://www.youtube.com/@UCppM" class="github"><i class="bx bxl-youtube"></i></a>
             </div>
           </div>
 
