@@ -38,7 +38,6 @@
 </head>
 
 <body>
-<!-- TODO Hacer todo esto-->
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
@@ -49,7 +48,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
           <li><a class="nav-link scrollto" href="#about">¿Quiénes somos?</a></li>
           <li><a class="nav-link scrollto" href="#why-us">Actividades</a></li>
           <li><a class="nav-link scrollto" href="#blog">Blog</a></li>
@@ -75,7 +74,7 @@
           <h2>Asociación de Programación Competitiva de la Universidad Complutense de Madrid</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
             
-            <a href="https://www.youtube.com/watch?v=b6GQJpNSUv8&ab_channel=Concursodeprogramaci%C3%B3nAdaByron" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <a href="https://www.youtube.com/watch?v=lpzljQ6plmY&feature=youtu.be" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -87,7 +86,6 @@
   </section><!-- End Hero -->
 
   <main id="main">
-<!-- TODO Cambiar a las fotos correctas-->
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients section-bg">
       <div class="container">
@@ -103,12 +101,13 @@
           </div>
 
           <div class="col-lg-3 col-md-6 col-12 d-flex align-items-center justify-content-center">
-            <img src="assets/img/logos/aceptaelreto_mejor_calidad.png" class="img-fluid" class="img-ajustada" alt="">
+            <img src="assets/img/logos/adabyron.png" class="img-fluid" class="img-ajustada" alt="">
           </div>
 
           <div class="col-lg-3 col-md-6 col-12 d-flex align-items-center justify-content-center">
-            <img src="assets/img/logos/adabyron.png" class="img-fluid" class="img-ajustada" alt="">
+            <img src="assets/img/logos/aceptaelreto_mejor_calidad.png" class="img-fluid" class="img-ajustada" alt="">
           </div>
+
 
         </div>
 
@@ -124,11 +123,47 @@
         </div>
         <span>
           <div class="row content">
-            <div class="col-lg-6">
-              <p> 
-                <img src="assets/img/fotos_pasadas/voluntarios_y_concursantes_AdaByron.jpeg" class="img-fluid" alt="" style="width: 100%;">
-              </p>
-            </div>
+            <div class="col-lg-6" class="slideshow-container">
+
+              <div class="mySlides">
+                <img src="/assets/img/fotos_actividades/primera_sesion_Fer.jpeg" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+
+              <div class="mySlides">
+                <img src="/assets/img/fotos_actividades/concurso_navidad_grupal.JPEG" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+
+              <div class="mySlides">
+                <img src="/assets/img/fotos_actividades/voluntarios_y_concursantes_AdaByron.jpeg" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+
+              <div class="mySlides">
+                <img src="/assets/img/fotos_actividades/pizarra_un_croissant_mubueno.JPG" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+
+              <div class="mySlides">
+                <img src="/assets/img/fotos_actividades/ganadores_primero_local_2024.JPG" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+
+              <div class="mySlides">
+                <img src="/assets/img/fotos_actividades/CCC_grupal.JPEG" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+              
+              <div class="mySlides">
+                <img src="/assets/img/fotos_actividades/ganadores_segundo_local_2024.JPG" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+              
+              <div class="mySlides">
+                <img src="/assets/img/fotos_actividades/pizarra_un_codigo_mejorable.JPG" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+
+              <div class="mySlides">
+                <img src="/assets/img/fotos_actividades/ganadores_tercero_local_2024.JPG" class="img-fluid" alt="" style="width: 100%;">
+              </div>
+              
+              <!-- Agrega más divs con clase "mySlides" y coloca tus imágenes dentro -->
+           
+          </div>
             <div class="col-lg-6" class="vertical-center">
               <p>
                 Del nombre puedes intuir que somos <b>programadores compitiendo</b>, ¿pero en qué?
@@ -139,6 +174,9 @@
               <p>
                 Son problemas como los que te encontrarías en una entrevista de trabajo o en algunas de las asignaturas de la carrera. Así que además de ser divertido, le puedes sacar partido durante la carrera y cuando la hayas terminado.
               </p>
+              <p>
+                ¿Te interesa lo que hacemos? <a href="https://discord.gg/vk9wPrYZXH">¡Únete a nuestro canal de Discord!</a> Es nuestro canal de comunicación principal, y no te perderás ninguna noticia. Tienes el resto de nuestros enlaces al final de la página, échales un vistazo ;)
+              </p>
             </div>
           </div>
         </span>
@@ -146,7 +184,27 @@
       </div>
     </section><!-- End About Us Section -->
 
-    <!-- ======= Why Us Section (Actividades) ======= -->
+    <!-- Script para el carrusel de fotos -->
+    <script>
+      var slideIndex = 0;
+      carousel();
+  
+      function carousel() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 4000); // Cambia cada 2 segundos (2000 milisegundos)
+      }
+    </script>
+
+    <!-- ======= Actividades ======= -->
     <section id="why-us" class="why-us section-bg">
       <div class="container-fluid" data-aos="fade-up">
 
@@ -160,41 +218,518 @@
 
             <div class="accordion-list">
               <ul>
+                <!-- 01 Actividades y sesiones de entrenamiento -->
                 <li>
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1" class="collapsed"><span>01</span> Actividades y sesiones de entrenamiento <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                       ¿Quieres practicar tus habilidades resolviendo problemas de programación? ¡Este es tu sitio! ¡Visítanos en nuestros entrenamiento y ponte a prueba!
                       <div class="accordion-list-2">
-                        <ul> 
+                        <ul>
+                          
+                          <!-- Liga 2 Ronda 1 28/02/2024 -->
                           <li>
-                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-2"><span>Viernes 20/10</span> Cloudflight Coding Contest <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-33"><span>Viernes 28/02</span> Ronda 1 Liga 2 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-33" class="collapse" data-bs-parent=".accordion-list-1">
+                            <img src="assets/img/carteles_actividades/segunda_liga_UCppM.jpg" class="img-fluid" alt="">
+                            <p>
+                              Gente, ¡volvemos con las ligas! :) <br><br>
+
+                              Este viernes haremos la primera ronda de novatos y veteranos. Para los novatos el asunto no cambia mucho (por ahora, veremos en la siguiente ronda), pero para los veteranos hay un cambio de formato importante, os lo explico:<br><br>
+
+                              Cada participante de la liga de veteranos podrá poner un problema en la ronda. Imaginad que yo pongo un problema: no tendría sentido que yo resuelva ese problema, porque ya me lo sé. ¿Entonces cómo puntúo? Pues ganaré un punto si "he puesto un buen problema". Esto significa que si alguien resuelve mi problema (era viable) pero no todos lo resuelven (no me he pasado de fácil) me llevaré un punto por ser buen problem-setter :)<br><br>
+
+                              Y otra cosa a comentar: todos los problemas de ambas ligas serán de Kattis. ¿Por qué? ¡Para ganar a CUNEF en el ranking de universidades! Quede como quede la liga, la UCM se alzará suuu <br><br>
+
+                              Pues eso gente, nos vemos este viernes. Vayan calentando jiji
+                            </p>
+                            </div>
+                          </li>
+                          
+                          <!-- Clase Introduccion Geometría Computacional 21/02/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-32"><span>Viernes 21/02</span> Introducción de Geometría computacional <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-32" class="collapse" data-bs-parent=".accordion-list-1">
+                            <img src="assets/img/carteles_actividades/introduccion_geometria_computacional.png" class="img-fluid" alt="">
+                            <p>
+                              A los buenos dias gente :) <br><br>
+                              Ya llego gran dia, el dia en el que porfin se os será revelado el increible mundo de la geometría computacional<br><br>
+                              A pesar de ser tan emocionante, no es un tema sobre el que se hable demasiado y los problemas sobre geometría son relativamente comunes en las competiciones.<br><br>
+                              Hablaremos sobre puntos, rectas (y segmentos), circulos y polígonos e indagaremos en las maravillas que nos aguardan.<br><br>
+                              Os esperamos el viernes 21 a las 14:20 (que el paseo desde mates no es instantaneo) en el aula 11.<br><br>
+                              Nos vemos ;D
+                            </p>
+                            </div>
+                          </li>
+
+                          <!-- Clase Introduccion Grafos 14/02/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-31"><span>Viernes 14/02</span> Introducción de Grafos <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-31" class="collapse" data-bs-parent=".accordion-list-1">
+                            <img src="assets/img/carteles_actividades/grafos_introduccion.jpg" class="img-fluid" alt="">
+                            <p>
+                                Este viernes vamos a explicar los tan esperados grafos, que son de gran importancia y super interesantes. Veremos las formas básicas de recorrerlos y resolveremos algunos problemas. Para los veteranos veremos flujos y problemas relaccionados.
+                              </p>
+                              <p>
+                                Estaremos este viernes en el aula 11 a las 13:30. Espero vernos por allí y que pueda compartir con vosotros mi amor por los grafos.
+                              </p>
+                            </div>
+                          </li>
+                          
+                          <!-- Clase Pre-Adabyron 6/02/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-30"><span>Jueves 06/02</span> Entrenamiento Pre-AdaByron <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-30" class="collapse" data-bs-parent=".accordion-list-1">
+                            <img src="assets/img/carteles_actividades/preadabyron06-02.jpg" class="img-fluid" alt="">
+                            <p>
+                                Este viernes es el gran día, la fase local de la UCM del regional de Madrid del concurso nacional Ada Byron. 
+                                Por tanto, a modo de déjà vu. Hemos pensado en dar el jueves una mini charla sobre las  estructuras de datos más básicas 
+                                de la STL: colas de pescado, libros apilados, mapas del tesoro...
+                              </p>
+                              <p>
+                                Nos vemos este jueves a las 13:30 en el aula 11
+                              </p>
+                            </div>
+                          </li>
+                          
+                          <!-- Ronda 3 Liga 1 13/12/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-29"><span>Viernes 13/12</span> Ronda 3 Liga 1 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-29" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/Final_de_liga.jpg" class="img-fluid" alt="">
+                              <p> 
+                                Bueno gente, ahora sí que sí, este viernes nos despedimos del cuatri con la última ronda de la primera liga de UCppM!!<br><br>
+
+                                El formato ya os lo conocéis, así que como siempre, podéis venir tanto los que lleváis a tope desde la primera ronda como los que no hayáis venido nunca. La diferencia principal en esta ocasión es que hay premios 🤑<br><br>
+
+                                Hay un premio principal para los ganadores de cada categoría, y aparte, para que nadie se vaya con las manos vacías, vamos a llevar unos regalitos para todos los participantes, independientemente del puesto en el que queden :)<br><br>
+
+                                Os paso un vídeo a continuación en el que podéis ver los premios que tenemos ya a mano, ojito con ello...
+                            </div>
+                          </li>
+                          
+                          <!-- ¡Números primos! 29/11/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-28"><span>Viernes 29/11</span> ¡Números primos! <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-28" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/numeros_primos.jpg" class="img-fluid" alt="">
+                              <p> 
+                                Hola gente!!<br><br>
+
+                                Este viernes, quizá os suene, nos vamos al SWERC! Eso significa que esta semana no hay sesión? NO<br><br>
+
+                                El pana Noah viene a daros una sesión bien chulona de cosillas de números primos, que bien interesantes que son 😌<br><br>
+
+                                Me encantaría estar para ver lo que gestiona el chaval, vayan y denle cariño :)<br><br>
+
+                                Mañana a las 13:30 en el aula 6 😇
+                            </div>
+                          </li>
+
+                          <!-- Preparando el final de liga 22/11/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-27"><span>Viernes 22/11</span> Preparando el final de liga <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-27" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/Preparando_final_liga.jpg" class="img-fluid" alt="">
+                              <p> 
+                                Hola gente!<br><br>
+
+                                Queda ya poquito para la última ronda de esta primera liga,
+                                 e interesa todavía ver unas cosillas de teoría importantes para hacer un final en condiciones :)<br><br>
+
+                                Así pues, este viernes rematamos unas cosas más de teoría y practicamos un poquillo. Prometemos intentar hacerlo ligero 😇<br><br>
+
+                                Nos vemos este viernes en el aula 6 a las 13:30 🤠
+                            </div>
+                          </li>
+                          
+                          <!-- Clase 14/11/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-26"><span>Jueves 14/11</span> Clase de búsqueda binaria <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-26" class="collapse" data-bs-parent=".accordion-list-1">
+                              <p> 
+                                Gente, en vista de lo que salió en la encuesta, mañana habrá otra actividad :)<br><br>
+
+                                Esta sí que la vamos a hacer más teórica, para enseñaros cosas bastante importantes.
+                                En principio vamos a ver cosas de recursión y de búsqueda binaria, que son fundamentales!<br><br>
+
+                                Nos vemos mañana en el aula 6 a las 13:30, como de costumbre :)
+                            </div>
+                          </li>
+
+                          <!-- Ronda 2 Liga 1 08/11/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-25"><span>Viernes 08/11</span> Ronda 2 Liga 1 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-25" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/Liga1Ronda2.jpg" class="img-fluid" alt="">
+                              <p> 
+                                Gente, este viernes va a ser la segunda ronda de la liga! 🤘🏼<br><br>
+
+                                Si no participaste en la ronda anterior no te preocupes, puedes participar en esta :)
+                                Y por supuesto, si participaste en la ronda anterior, tocará mantener o mejorar el ranking, ¿no? 🤠<br><br>
+
+                                Aula 11 a las 13:30, como de costumbre. Nos vemos chavales 😙
+                            </div>
+                          </li>
+
+                          <!-- Clase teórica vectores, matrices y complejidad 11/10/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-24"><span>Jueves 31/10</span> Clase de vectores, matrices y complejidad (en Halloween :)) <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-24" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/Halloween_UCppM.jpg" class="img-fluid" alt="">
+                              <p> 
+                                Hola gente! Este viernes es festivo, pero para compensar vamos a hacer una actividad así tranquilita y más improvisada este jueves :)<br><br>
+
+                                Vamos a estar viendo más a fondo como manejarse con vectores y matrices, que es verdaderamente importantísimo, fundamental para cualquier cosa de programación competitiva. De paso, si vamos bien de tiempo, comentaremos un poco acerca de lo que es la ”complejidad” o el ”coste” de los que tanto hablamos. Son cosillas que, aunque no sean horriblemente difíciles, son realmente cruciales.<br><br>
+
+                                Nos vemos pronto chavales, jueves en el aula 6 a las 13:30 :)
+                            </div>
+                          </li>
+                          
+                          <!-- CCC Octubre 2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-23"><span>Viernes 25/10</span> CCC Octubre 2024 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-23" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/Cartel_CCC_25-10-2024.png" class="img-fluid" alt="">
+                              <p> 
+                                Bueno gente, ahora sí que sí. ¡Este viernes es el Cloudflight Coding Contest! 🔥 🤲<br><br>
+
+                                Estas últimas semanas ya os hemos estado comentando por qué nos interesa mucho este evento, pero para refrescar vuestras mentes:<br>
+                                ¡Van a venir participantes de otras universidades! Hemos hablado con la URJC, la UAM, la UPM y la CUNEF. Sabemos ya de unos cuantos participantes, veremos con cuantos nos acabamos encontrando el viernes 😁<br>
+                                Unos premios tremendos. Por el simple hecho de participar habrá pegatinas bien chulas (las podéis ver en nuestro Instagram), pero además para los ganadores habrá unas medallas brutales (de nuevo, están en Instagram) y premios en metálico: 150€ para el equipo ganador, 100€ para el segundo y 50€ para el tercero, ¡300€ en juego!. Vamos, una barbaridad 💵<br>
+                                Es un estilo de concurso distinto a lo que estamos acostumbrado, pues es lineal. Una vez resuelvas el primer problema tendrás acceso al segundo. Al resolver el segundo tendrás acceso al tercero, ... Vemos el patrón, ¿verdad? 🤔<br><br>
+
+                                ¿Te interesa participar? Pues aquí tienes el enlace para apuntarte: <a href="https://register.codingcontest.org/listing/143-2024-10-25">enlace</a><br><br>
+                                Se puede participar individualmente o en equipos de hasta tres personas. El concurso empieza a las 15:00 y dura cuatro horas. Si alguien no puede estar toda la duración del concurso no pasa nada, aunque entre los premios y la posibilidad de ir a tomar algo después por esto de conocer a la gente de fuera y celebrar yo recomiendo estar hasta el final :)<br><br>
+
+                                Será en el aula 9 (es de las grandes jeje). Os pedimos que estéis con media hora de antelación como mínimo para que todo vaya rodado. Nosotros estaremos al menos una hora antes para ir recibiendo a todo el mundo y conocer a los de otras unis. Un saludo gente y que tengáis buena semana :)
+                            </div>
+                          </li>
+
+                          <!-- Ronda 1 Liga 1 11/10/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-22"><span>Viernes 18/10</span> Ronda 1 Liga 1 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-22" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/Ronda1_Liga1_UCppM.jpg" class="img-fluid" alt="">
+                              <p> 
+                                Ya sí gente, ¡este viernes es el primer concurso de la liga! 😁<br><br>
+
+                                Como hablamos el último día, la de novatos será por equipos de hasta tres personas (se puede participar individualmente) y la de veteranos será individual. ¿Os mola el asunto? Si es así, rellena el siguiente formulario y estará todo gestionado para el viernes ir directos a los problemas: <a href="https://docs.google.com/forms/d/e/1FAIpQLSeavI9HMpU5aoWTJ85OiEyux35pK7CkNXy42NNAMI5erGLb-Q/viewform?usp=sf_link">enlace</a>
+                                El formulario es importante, rellenadlo porfis 🙏🏼<br><br>
+
+                                La liga consistirá en cuatro concursos en semanas distintas. Los resultados de cada concurso se irán acumulando, y tras el último concurso se sumarán todos los resultados y se verá quiénes son los ganadores. Cada problema resuelto contará un punto hacia el marcador final, y todo el tiempo acumulado de cada concurso sumará hacia el tiempo empleado total.<br><br>
+
+                                Nos hace bastante ilusión empezar con esto por fin, os esperamos a todo este viernes en el aula 11. El concurso empieza a las 14:00 y durará dos horas, pero empezaremos la actividad a las 13:30 para gestionar todo con margen. Nos vemos pronto chavales, buena semana 🫶🏼😌
+                            </div>
+                          </li>
+
+                          <!-- Empiezan las ligas 11/10/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-21"><span>Viernes 11/10</span> ¡Empiezan las ligas! <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-21" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/Inicio_ligas_UCppM.jpg" class="img-fluid" alt="">
+                              <p> 
+                                Ahora sí gente , ¡comienzan las ligas! 😙🤘🏼<br><br>
+
+                                Este viernes explicaremos del todo en qué va a consistir el asunto, y de paso haremos la primera práctica, que bastante bien vendrá. Como siempre, nos vemos este viernes, aula 6 a las 13:30 🙃
+                            </div>
+                          </li>
+
+                          <!-- Compite en equipo 04/10/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-20"><span>Viernes 04/10</span> ¡Compite en equipo! <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-20" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/Concurso_04-10-2024.jpg" class="img-fluid" alt="">
+                              <p> 
+                                Volvemos a las actividades normales gente. ¡Este viernes hacemos el primer concurso de verdad!<br><br>
+
+                                Como muchos sois nuevos y aún no conocéis a demasiada gente, vamos a hacer una cosa distinta a lo usual: los equipos los haremos nosotros. Así podréis aprovechar la actividad para conocer a gente nueva y ver distintas formas de pensar.
+                                Habrá problemas de todos los niveles, para que tanto principiantes como veteranos estéis entretenidos y podáis gestionaros vuestras propias estrategias de equipo.<br><br>
+
+                                Viernes 4, 13:30, aula 6. Os esperamos :)
+                            </div>
+                          </li>
+
+                          <!-- Primeros pasos UCppM 20/09/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-19"><span>Viernes 20/09</span> Primeros pasos en UCppM 2024 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-19" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/PrimerosPasosUCppM.png" class="img-fluid" alt="">
+                              <p> 
+                                Bueno, gente, siguiente actividad 🤠<br><br>
+                                
+                                Ahora sí, vamos a dar un primer paso hacia los problemas de programación competitiva, con todo lo que eso conlleva. Haremos vuestros primeros envíos y todo eso :)<br><br>
+
+                                Lo intentaremos adaptar a lo más básico posible que hayáis dado en clase. En cualquier caso, tendremos una cosa aparte para si lo que se ha dado en clase va muy justo. Si no os suena Profesor Layton, os recomiendo buscarlo, yo creo que os gustará 🎩<br><br>
+
+                                Viernes 20, 13:30, aula 6. Nos vemos gente :)
+                            </div>
+                          </li>
+
+                          <!-- Bienvenidos a UCppM 2024 13/09/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-18"><span>Viernes 13/09</span> Bienvenidos a UCppM 2024 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-18" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/Bienvenidos2024.png" class="img-fluid" alt="">
+                              <p> 
+                                ¡Hola! Hemos vuelto, por fin :) <br><br>
+
+                                Hemos conocido a mucha gente nueva en los últimos días, así que este viernes haremos una pequeña actividad de introducción al mundo de la programación competitiva para todo el mundo. Da igual si eres nuevo o no del todo, si esto te interesa, quieres conocer a gente y pasar unos buenos ratos, te esperamos con ganas. Os comentaremos lo que está por venir en las próximas semanas, las cosas que hemos hecho y las que haremos. ¡Os vemos este viernes! :)
+                            </div>
+                          </li>
+
+                          <!-- Concurso Primavera UCppM 2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-17"><span>Viernes 10/05</span> Concurso Primavera UCppM 2024 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-17" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/ConcursoPrimavera2024.png" class="img-fluid" alt="">
+                              <p> 
+                                Buenas gente!<br><br>
+
+                                Esta semana se acaban las clases, y con ello nuestras actividades de este año. Por ello, terminamos con lo que más nos gusta a todos: un concurso de los de toda la vida. Vamos a hacer una réplica de la regional del Ada Byron de Galicia, que es una oportunidad espectacular. Además, queremos que sea un concurso de verdad, así que sí, habrá regalos bien chulos! (No serán camisetas, jurao). Aparte, es posible que no haya premios SOLO para los ganadores, asi que ojo todo el mundo. Os vemos en el aula 12, como siempre, a las 15:00 :)
+                            </div>
+                          </li>
+
+                          <!-- Concurso 26/04/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-16"><span>Viernes 26/04</span> Concurso 26/04/2024 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-16" class="collapse" data-bs-parent=".accordion-list-1">
+                              <p> 
+                                Gente, este viernes toca otro concursillo 😎<br><br>
+
+                                Este será decente, no como el CCC. Prometemos que no será lineal y no os atascaremos en el cuarto problema que pa cuando te piensas que lo tienes propones una demostración de P=NP. Aula y hora serán las de siempre, pero os confirmamos cuando tengamos la reserva 🤙🏼🤙🏼
+                            </div>
+                          </li> 
+
+                          <!-- CCC 19/04/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-15"><span>Viernes 19/04</span> Cloudflight Coding Contest 2024 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-15" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/CCC_2.jpeg" class="img-fluid" alt="">
+                              <p> 
+                                Buenas! Este viernes vuelve a darse el Cloudflight Coding Contest y, al igual que el año pasado, vamos a hostearlo en Madrid!<br><br>
+
+                                Si estuviste en el del año pasado ya puedes imaginar cómo va el tema, y si eres nuevo te recomendamos mucho que te apuntes. Es un concurso con un formato bastante divertido y nuevo. Los problemas se hacen de forma lineal y con una dificultad incremental. Además, en vez de evaluarse el código, todo se ejecuta en local y se sube el output. Los documentos con los enunciados son super chulos y tienen un cuidado al detalle brutal. La última vez nos lo pasamos genial, y nos alegra poder ser hosts una vez más :)<br><br>
+
+                                Habrá medallas para los ganadores, y pegatinas bastante guapas (que según me han dicho molan hasta más que las anteriores, y esas molaban ya lo suyo eh).<br><br>
+
+                                Así que eso, os esperamos este viernes 19. El concurso empieza a las 15:00. Reservaremos un aula para tenerla desde un rato antes, pero eso ya os lo avisamos cuando lo tengamos gestionado.<br><br>
+
+                                Se puede participar de forma individual o en equipos de hasta 3 personas. Podéis registraros a través del siguiente enlace: <a href="https://register.codingcontest.org/listing/143-2024-04-19/5301/registration">https://register.codingcontest.org/listing/143-2024-04-19/5301/registration</a><br><br>
+
+                                Eso es todo gente, nos vemos pronto :)
+                            </div>
+                          </li>
+
+                          <!-- Entrenamiento #8 12/04/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-14"><span>Viernes 12/04</span> Entrenamiento #8 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-14" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/calico.png" class="img-fluid" alt="">
+                              <p> 
+                                ¡Buenas a todos! Después de el coñazo la sesión de teoría de la semana pasada, mañana vamos a hacer una sesión de problemas. Los problemas de mañana son de CALICO, así que habrá problemas de todas las dificultades, y traeremos de invitado a un organizador del concurso (el menda lerenda) por si queréis hacer preguntas sobre los problemas o sobre el concurso en sí. ¡Os esperamos!
+                            </div>
+                          </li>
+
+                          <!-- Entrenamiento #7 05/04/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-13"><span>Viernes 05/04</span> Entrenamiento #7 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-13" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/fotos_actividades/matroides.jpg" class="img-fluid" alt="">
+                              <p> 
+                                Buenas 🤠<br><br>
+                                
+                                Este viernes tendremos primera sesión tras la Semana Santa, y va a ser un tanto distinta. Esta vez, en vez de dedicar tanto a los problemas, vamos a tener una sesión más divulgativa, y en vez de ser tan de informática va a ser más de matemáticas 🧐<br><br>
+
+                                Va a venir nuestro compañero a Ignacio a darnos una charla acerca de “matroides” (algo del Metroid será no sé), concepto al que probablemente todos (o casi todos) somos completamente nuevos. Así que eso, preparen las orejas que se viene una buena 🤙🏼
+                            </div>
+                          </li>
+
+                          <!-- Entrenamiento #6 15/03/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-12"><span>Viernes 15/03</span> Entrenamiento #6 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-12" class="collapse" data-bs-parent=".accordion-list-1">
+                              <p> 
+                                Por cierto gente, este viernes, para aprovechar que hay mono de problemas después del Ada (excusa de cojones, no hemos dado pa mucho mas), la actividad será sesión de problemas tranquilita, con selección de problemas para novatos y para veteranos, como siempre <br><br>
+
+                                Así que eso, actividad tranquilita bing chilling nosequé <br><br>
+
+                                Ahí os vemos (aula 12 a las 15:00) 🤙🏼
+                            </div>
+                          </li>
+
+                          <!-- Entrenamiento Ada Byron #2 01/03/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-11"><span>Viernes 01/03</span> Entrenamiento Ada Byron #2 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-11" class="collapse" data-bs-parent=".accordion-list-1">
+                              <p> 
+                                Gente! La semana que viene es la regional del Ada Byron! Por ello se siente bastante apropiado que este viernes sea el último entrenamiento previo para el mismo. Tendremos problemas para hacer, pero venid con todas las consultas, solicitudes o ideas que queráis, y resolveremos todas las que no  se nos escapen de las manos (que esperemos sea ninguna). Y por supuesto, ninguna exclusividad para los concursantes de la regional, que venga quien quiera, que habrá cosas para todos :) <br><br>
+
+                                Os vemos el viernes a las 15:00 en el aula 12 (o eso asumo, que no la hemos reservado aún 🤙🏼)
+                            </div>
+                          </li>
+
+                          <!-- Mirror OIM 23/02/2024 -->
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-10"><span>Viernes 23/02</span> Mirror OIM <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-10" class="collapse" data-bs-parent=".accordion-list-1">
+                              <img src="assets/img/carteles_actividades/mirror_IOM.jpg" class="img-fluid" alt="">
+                              <p> 
+                                Hola de nuevo :)<br><br>
+
+                                Aprovechando lo que se ha dado este fin de semana pasado, este viernes retomamos las actividades dedicando la sesión a los problemas que se pusieron en esta Olimpiada Informática de Madrid pasada. En la retransmisión del sábado hay spoilers y soluciones completas, pero os recomendamos esperar al viernes antes de ver nada. Hay problemas muy chulos y que merece la pena pensar desde el principio.<br><br>
+
+                                Os vemos el viernes a las 15:00 en el aula 12 :)
+                            </div>
+                          </li>
+
+                          <!-- Entrenamiento Ada Byron #1 09/02/2024 --> 
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-9"><span>Viernes 09/02</span> Entrenamiento Ada Byron #1 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-9" class="collapse" data-bs-parent=".accordion-list-1">
+                              <p> 
+                                Buenas! Espero que hayáis pasado todos unas fantásticas vacaciones, que los exámenes hayan ido bien y que estéis comenzando con ganas el curso. <br><br>
+
+                                Por nuestra parte, todo lo de arriba es cierto, así que para comenzar este segundo cuatrimestre hemos decidido tener sesiones de entrenamiento. Aunque su objetivo es ayudar a aquellos equipos que participan en el Ada Byron, estás sesiones están abiertas a todo el mundo, así que no tengáis miedo en pasaros un rato!<br><br>
+
+                                Un cambio con respecto a las sesiones del semestre pasado es que en las sesiones de entrenamiento hasta el Ada Byron ya no tendrán un tema, y podremos tocar los temas que os interesen más. Si necesitáis algún concepto específico para resolver un problema, ya os lo contaremos durante la sesión, y si queréis algún tema o temática específica para la sesión, adelante, proponed lo que queráis.<br><br>
+
+                                Nos vemos en la primera sesión este Viernes a las 15:00 en el aula 12!
+                            </div>
+                          </li>
+
+                          <!-- Yincana navideña 01/12/2023 --> 
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-8"><span>Viernes 15/12</span> Yincana navideña <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-8" class="collapse" data-bs-parent=".accordion-list-1">
+                              <p> 
+                                <img src="assets/img/carteles_actividades/Concurso_Navidad.jpeg" class="img-fluid" alt="">
+                                Última actividad del año!<br><br>
+                                
+                                Cerramos esta época con una yincana navideña (o gymcana, gyncana, yo que sé). Todos tenemos ganas de celebrar Navidad, pero bueno… ha habido algunos contratiempos. Vais a tener que ayudarnos a que se puedan celebrar como siempre, y vais a tener que resolver unos problemas para ello.<br><br>
+
+                                La actividad va a ser lineal: comienza la historia y te enfrentarás al primer problema. Resuelve el primer problema y podrás continuar con la historia, y de ahí tendrás acceso al segundo problema. Sigue así, resuelve el último y habrás completado la tarea (y con ello salvado la Navidad, poca broma)! Habrá bombones para quienes lleguen al final (y para el resto si nos sentimos generosos).<br><br>
+
+                                Os esperamos a todos este viernes, cerremos el año con gusto :)
+                            </div>
+                          </li>
+                          
+                          <!-- Entrenamiento #5 01/12/2023 --> 
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-7"><span>Viernes 01/12</span> Entrenamiento #5 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-7" class="collapse" data-bs-parent=".accordion-list-1">
+                              <p> 
+                                <img src="assets/img/carteles_actividades/Entrenamiento5.jpeg" class="img-fluid" alt="">
+                                Eu 🫡
+                                Anuncio un poco tardío, pero este viernes será la sesión de búsqueda binaria. Un pilar fundamental de la programación competitiva, sin ella se nos cae todo.
+                                Luego si da tiempo (que yo creo que si) quizá nos metamos a ver alguna página de programación que básicamente está para jugar :) (si alguien se quiere hacer algo de spoiler que busque CodinGame en internet, mola bastante)
+                            </div>
+                          </li>
+
+                          <!-- Entrenamiento #4 24/11/2023 --> 
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-6"><span>Viernes 24/11</span> Entrenamiento #4 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-6" class="collapse" data-bs-parent=".accordion-list-1">
+                              <p> 
+                                <img src="assets/img/carteles_actividades/Entrenamiento4.jpeg" class="img-fluid" alt="">
+                                Venga va, esta semana más suavecito.<br><br>
+
+                                Seguiremos con los problemas de la semana pasada. 
+                                Es verdad que lo de los grafos es un mundo, y hace falta tiempo y 
+                                práctica para interiorizarlos, así que este viernes indagamos un 
+                                poco más en lo de la sesión anterior, que el DFS y BFS hay que 
+                                sabérselo mejor que el padre nuestro 🥸
+                              </p>
+                            </div>
+                          </li>
+
+                          <!-- Entrenamiento #3 17/11/2023 --> 
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-5"><span>Viernes 17/11</span> Entrenamiento #3 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-5" class="collapse" data-bs-parent=".accordion-list-1">
+                              <p> 
+                                <img src="assets/img/carteles_actividades/Entrenamiento3.jpeg" class="img-fluid" alt="">
+                                Sesión este viernes asié asié<br><br>
+
+                                Nos meteremos al mundillo de los grafos y la exploración en ellos (asunto bastante guapo, si se me permite 🤙🏼) 
+                                y para los veteranos que sepan hacer DFS y Dijkstra con los ojos cerrados tendremos también una selección de problemas 
+                                más complicados, esta vez sin una temática predeterminada, para haceros pensar 😎
+                              </p>
+                            </div>
+                          </li>
+                          
+                          <!-- Entrenamiento #2 03/11/2023 --> 
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-4"><span>Viernes 03/11</span> Entrenamiento #2 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-4" class="collapse" data-bs-parent=".accordion-list-1">
+                              <p> 
+                                <img src="assets/img/carteles_actividades/Entrenamiento2.jpeg" class="img-fluid" alt="">
+                                Este viernes echaremos un vistazo a los problemas que sugerimos en la sesión anterior.<br><br>
+
+                                Sabemos que los hay complicados, así que los iremos desentrañando juntos :)<br><br>
+
+                                Os garantizamos que después de esta sesión sabremos cómo comprobar fácilmente si Tony Stark o Peter Parker mueren 🤧
+                              </p>
+                            </div>
+                          </li>
+
+                          <!-- Entrenamiento #1 27/10/2023 --> 
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-3"><span>Viernes 27/10</span> Entrenamiento #1 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1-3" class="collapse" data-bs-parent=".accordion-list-1">
+                              <p> 
+                                <img src="assets/img/carteles_actividades/Entrenamiento1.jpeg" class="img-fluid" alt="">
+                                  Euu 🤠<br><br>
+
+                                  Sesión este viernes 27 para principiantes y no tan principiantes.
+                                  Para los más nuevos, veremos cómo manejarnos con las estructuras básicas de la STL. 
+                                  Son el pan de cada día en la programación competitiva, 
+                                  si eres nuevo este es un punto estupendo por el que empezar 🙃<br><br>
+
+                                  Para los no tan nuevos, Sparse Tables y Fenwick Trees. 
+                                  Dos estructuras interesantísimas y que nos van a permitir expandir a 
+                                  conceptos súper guapos en sesiones futuras.<br><br>
+
+                                  Os esperamos con muchas ganas y con una estupenda selección de problemas 
+                                  para trabajar sobre estos conceptos (y picarse tanto como uno decida 😎).
+                              </p>
+                            </div>
+                          </li>
+
+                          <!-- CCC 20/10/2023 --> 
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-2"><span>Viernes 20/10</span> Cloudflight Coding Contest 2023 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="accordion-list-1-2" class="collapse" data-bs-parent=".accordion-list-1">
                               <p> 
-                                <img src="assets/img/actividades/CCC.jpeg" class="img-fluid" alt="">
+                                <img src="assets/img/carteles_actividades/CCC.jpeg" class="img-fluid" alt="">
                                 ¡Quedáis invitados a la 38ª edición del Cloudflight Coding Contest!<br>
 
                                 Este es un concurso de programación organizado por Cloudflight. 
                                 A diferencia de otros concursos, los problemas están clasificados en niveles, 
                                 donde para acceder a un nivel debes haber resuelto los niveles anteriores. 
-                                ¡El objetivo es el último nivel! <br>
+                                ¡El objetivo es el último nivel! <br><br>
 
                                 Para esta edición Cloudflight y UCppM se han unido para alojar una versión presencial del concurso 
                                 en la facultad de informática. La competición admite equipos de entre 1 y 3 jugadores, 
-                                así que reúne a tu equipo, prepara tu portátil y ¡apúntate! ¡Que hay plazas limitadas! <br>
+                                así que reúne a tu equipo, prepara tu portátil y ¡apúntate! ¡Que hay plazas limitadas! <br><br>
 
-                                Fecha: 20 de octubre de 2023. <br>
-                                Hora: De 15:00 a 19:00. <br>
-                                Lugar: Aula 7 de la Facultad de Informática de la UCM. <br>
+                                Fecha: 20 de octubre de 2023. <br><br>
+
+                                Hora: De 15:00 a 19:00. <br><br>
+
+                                Lugar: Aula 7 de la Facultad de Informática de la UCM. <br><br>
+
                                 Registro: <a href="https://register.codingcontest.org/listing/143-2023-10-20">https://register.codingcontest.org/listing/143-2023-10-20</a> <br>
                               </p>
                             </div>
                           </li>
+
+                          <!-- Concurso de iniciación 06/10/2023 --> 
                           <li>
                             <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-1"><span>Viernes 06/10</span> Concurso de iniciación <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="accordion-list-1-1" class="collapse" data-bs-parent=".accordion-list-1">
                               <p> 
-                                <img src="assets/img/actividades/Sesion_UCppM_2023-10-06.jpeg" class="img-fluid" alt="">
+                                <img src="assets/img/carteles_actividades/Sesion_UCppM_2023-10-06.jpeg" class="img-fluid" alt="">
                               </p>
                             </div>
                           </li>
@@ -203,25 +738,86 @@
                     </p>
                   </div>
                 </li>
-
+                
+                <!-- 02 Participación en concursos de programación -->
                 <li>
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Participación en concursos de programación <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                       Participamos en distintos concursos, entre los que destacamos el Ada Byron, un concurso organizado entre distintas universidades españolas y del que somos campeones este año (y subcampeones y subsubcampeones). Publicaremos las fechas cuando sean decididas.
+                      ¿Quieres practicar tus habilidades resolviendo problemas de programación? ¡Este es tu sitio! ¡Visítanos en nuestros entrenamiento y ponte a prueba!
+                      <div class="accordion-list-2">
+                        <ul>
+                          <li>
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2-1"><span> 02/02 </span> Fase local del Ada Byron 2024 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-2-1" class="collapse" data-bs-parent=".accordion-list-2">
+                              <p> 
+                                <img src="assets/img/concursos/adabyron.jpeg" class="img-fluid" alt=""><br>
+                                ¡La X edición de AdaByron comienza a ponerse en marcha!<br><br>
+
+                                La fase local UCM (que servirá para elegir los equipos que representen a nuestra universidad en el regional de Madrid) tendrá lugar el 2 de febrero. La inscripción ya está abierta (hasta el 28 de enero). Tenéis todos los detalles aquí. El regional de Madrid tendrá lugar los días 8 y 9 de marzo, en la UC3M.<br><br>
+
+                                Tenéis toda la información en el siguiente enlace: <a href="https://ada-byron.es/2024/reg/madrid/locales/ucm/">https://ada-byron.es/2024/reg/madrid/locales/ucm/</a> <br><br>
+
+                                Tenemos muchísimos buenos recuerdos y amistades de estos concursos, no nos lo pensamos perder. Os recomendamos a vosotros que hagáis lo mismo, seáis nuevos o expertos, es un evento estupendo :)
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                     </p>
                   </div>
                 </li>
 
+                <!-- 03 Organización del clasificatorio del SWERC --> 
                 <li>
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Organización del clasificatorio del SWERC <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      SWERC es un concurso a nivel Europeo, y nosotros organizamos el clasificatorio para competir representando a la Complutense. Avisaremos cuando se de fecha para la fase clasificatoria. ¡Participa y consigue tu plaza para la final!
-                    </p>
+                    <div class="accordion-list-2">
+                      <ul>
+
+                        <!-- Clasificatorio SWERC 2024-2025 --> 
+                        <li>
+                          <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-3_swerc2024-2025"><span>SWERC</span>2024-2025<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                          <div id="accordion-list-1-3_swerc2024-2025" class="collapse" data-bs-parent=".accordion-list-1">
+                            <p>
+                              <img src="assets/img/carteles_actividades/Cartel_SWERC_2024-2025.png" class="img-fluid" alt="">
+                              Ya es definitivo, gente, ¡el clasificatorio del SWERC es esta semana! 🤠<br><br>
+
+                              Como ya os comentamos, el SWERC es la competición internacional en la que participamos cada año. Son tres días de viaje pagado (este año a Lisboa 🇵🇹), de conocer a gente y de salir de España. Este año será del 29 de noviembre al 1 de diciembre. Hay 6 plazas (para formar 2 equipos), ¿quieres intentar clasificarte? Rellena el siguiente formulario (importante, con la cuenta de la UCM): <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCx26SmfBimJoKoOkCQc6lKbguCa4mowDarrY_5KjOqaDvsw/viewform?usp=sf_link">Formulario</a>
+                              Se aceptarán respuestas hasta el jueves 26 a las 22:00. También se puede participar aunque no quieras ir al SWERC, simplemente indícalo en el formulario.<br><br>
+
+                              Viernes 27 a las 15:00 en el laboratorio 11. ¡Mucha suerte a todos! 🙃
+                            </p>
+                          </div>
+                        </li>
+                        
+                        <!-- Clasificatorio SWERC 2023-2024 --> 
+                        <li>
+                          <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-3_swerc2023-2024"><span>SWERC</span>2023-2024<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                          <div id="accordion-list-1-3_swerc2023-2024" class="collapse" data-bs-parent=".accordion-list-1">
+                            <p>
+                              <img src="assets/img/carteles_actividades/clasificatorio_SWERC.jpeg" class="img-fluid" alt="">
+                              Hey!<br><br>
+
+                              La semana que viene hacemos el clasificatorio para el SWERC. Este es el concurso clasificatorio Europeo para el ICPC, el nivel es altísimo!<br><br>
+
+                              Os animamos a venir y darlo todo, a ver quienes serán nuestros representantes en París. Es una experiencia única, merece muchísimo la pena.<br><br>
+
+                              Así que eso, a ver quienes serán nuestros representantes este año en París 🙌🏼<br><br>
+
+                              <a href="
+                              https://forms.gle/958vsXZ5QvPFh87t9">Formulario</a> <br>
+                              Fecha límite de inscripción: Sábado 4 de noviembre.
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </li>
 
+                <!-- 04 Voluntario de otros concursos no universitarios -->
                 <li>
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>04</span> Voluntario de otros concursos no universitarios <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
@@ -232,12 +828,206 @@
                   </div>
                 </li>
 
+                <!-- 05 Ligas --> 
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed"><span>05</span> Nuestras ligas <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
+                    <div class="accordion-list-2">
+                      <ul>
+
+                        <!-- Otoño 2024 - Novatos --> 
+                        <li>
+                          <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-5_liga1_novatos"><span>Otoño 2024</span>Primera liga UCppM - Novatos<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                          <div id="accordion-list-1-5_liga1_novatos" class="collapse" data-bs-parent=".accordion-list-1">
+                            <p>
+                              <div class="accordion-list-2">
+                                <div class="container mt-5">
+                                  <div class="section-title">
+                                    <p>¡Esta es la primera liga de novatos de UCppM! En ella, los participantes compiten solos o en equipos de hasta 3 personas.</p>
+                                    <p><br></p>
+                                    <h2>Ranking Liga otoño 2024 - Novatos</h2>
+                                  </div>
+                                  <div class="table-responsive">
+                                    <table class="table table-striped table-hover align-middle">
+                                      <thead class="table-primary">
+                                        <tr>
+                                          <th scope="col">Posición</th>
+                                          <th scope="col">Nombre de equipo</th>
+                                          <th scope="col">Problemas resueltos</th>
+                                          <th scope="col">Tiempo acumulado</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th scope="row">1</th>
+                                          <td>beezing</td>
+                                          <td>20</td>
+                                          <td>1303</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">2</th>
+                                          <td>Didi</td>
+                                          <td>16</td>
+                                          <td>1226</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">3</th>
+                                          <td>Mrbryan</td>
+                                          <td>15</td>
+                                          <td>986</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">4</th>
+                                          <td>DHX</td>
+                                          <td>12</td>
+                                          <td>730</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">5</th>
+                                          <td>Guerreros del dragón</td>
+                                          <td>10</td>
+                                          <td>704</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">6</th>
+                                          <td>Los Pacos</td>
+                                          <td>10</td>
+                                          <td>557</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">7</th>
+                                          <td>SeguridadVIAL</td>
+                                          <td>6</td>
+                                          <td>383</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">8</th>
+                                          <td>Club del delito</td>
+                                          <td>4</td>
+                                          <td>365</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">9</th>
+                                          <td>Los paralelepípedos</td>
+                                          <td>3</td>
+                                          <td>197</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">10</th>
+                                          <td>Finosaurios</td>
+                                          <td>3</td>
+                                          <td>331</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">11</th>
+                                          <td>FLPeriotto</td>
+                                          <td>2</td>
+                                          <td>172</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">12</th>
+                                          <td>ali</td>
+                                          <td>2</td>
+                                          <td>246</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>                                        
+                              </div>
+                            </p>
+                          </div>
+                        </li>
+
+                        <!-- Otoño 2024 - Veteranos --> 
+                        <li>
+                          <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1-5_liga1_veteranos"><span>Otoño 2024</span>Primera liga UCppM - Veteranos<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                          <div id="accordion-list-1-5_liga1_veteranos" class="collapse" data-bs-parent=".accordion-list-1">
+                            <p>
+                              <div class="accordion-list-2">
+                                <div class="container mt-5">
+                                  <div class="section-title">
+                                    <p>¡Esta es la primera liga de veteranos de UCppM! En ella, los participantes compiten solos de forma individual.</p>
+                                    <p><br></p>
+                                    <h2>Ranking Liga otoño 2024 - Veteranos</h2>
+                                  </div>
+                                  <div class="table-responsive">
+                                    <table class="table table-striped table-hover align-middle">
+                                      <thead class="table-primary">
+                                        <tr>
+                                          <th scope="col">Posición</th>
+                                          <th scope="col">Nombre del participante</th>
+                                          <th scope="col">Problemas resueltos</th>
+                                          <th scope="col">Tiempo acumulado</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th scope="row">1</th>
+                                          <td>Dalopir</td>
+                                          <td>13</td>
+                                          <td>702</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">2</th>
+                                          <td>NotTete</td>
+                                          <td>10</td>
+                                          <td>380</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">3</th>
+                                          <td>N41h_Dr3s</td>
+                                          <td>8</td>
+                                          <td>367</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">4</th>
+                                          <td>yung_ramon</td>
+                                          <td>8</td>
+                                          <td>375</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">5</th>
+                                          <td>DUNKITO</td>
+                                          <td>4</td>
+                                          <td>270</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">6</th>
+                                          <td>pedro49max</td>
+                                          <td>4</td>
+                                          <td>374</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">7</th>
+                                          <td>ankhdrv</td>
+                                          <td>3</td>
+                                          <td>183</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">8</th>
+                                          <td>dego</td>
+                                          <td>0</td>
+                                          <td>0</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>                                        
+                              </div>
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
 
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/fotos_pasadas/primera_sesion_Fer.jpeg");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/fotos_actividades/concurso_navidad_desarrollo.JPEG");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
 
         </div>
 
@@ -245,42 +1035,12 @@
     </section><!-- End Why Us Section -->
 
     <section id="blog" class="blog">
-      <a class="twitter-timeline" href="https://twitter.com/UCppM?ref_src=twsrc%5Etfw">Tweets by UCppM</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <!-- 
-      <div class="blog-container">
-        
 
-        <style>
-          #miIframe {
-            display: block; /* Ensures the iframe is treated as a block element */
-            margin: 0 auto; /* Center horizontally using auto margins */
-          }
-        </style>
-      
-        <script>
-          // Función para ajustar la altura del iframe según el contenido
-          function ajustarAlturaIframe() {
-            const iframe = document.getElementById('miIframe');
-            if (iframe) {
-              iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-              iframe.style.width = iframe.contentWindow.document.body.scrollWidth + 'px';
-            }
-          }
-      
-          // Ajustar la altura del iframe cuando se cargue o redimensione la ventana
-          window.addEventListener('load', ajustarAlturaIframe);
-          window.addEventListener('resize', ajustarAlturaIframe);
-        </script>
-      
-        <iframe id="miIframe" src="top3-posts.html"  frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+      <!-- Feed de Instagram -->
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-7859f448-85c3-4058-8e35-3d30709f7513" data-elfsight-app-lazy></div>
 
-      </div>  
-      
-    -->
     </section>
-
-<!-- TODO Quitar todo lo relacionado con la sección de Portfolio, que la he quitado-->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
@@ -294,20 +1054,19 @@
 
           <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/Fernando.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/Dani.JPEG" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Fernando Isaías Leal Sánchez</h4>
+                <h4>Daniel "Canario" González Arbelo</h4>
                 <span>Presidente</span>
-                
               </div>
             </div>
           </div>
 
           <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/David.jpeg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/Dunkito.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>David Andrés López Gómez</h4>
+                <h4>Daniel "Dunkito" Bordeianu</h4>
                 <span>Vicepresidente</span>
               </div>
             </div>
@@ -315,9 +1074,9 @@
 
           <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/Cai.jpeg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/Jorge.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Jinqing Cai</h4>
+                <h4>Jorge "Tete" Hernández Palop</h4>
                 <span>Secretario</span>
               </div>
             </div>
@@ -325,14 +1084,24 @@
 
           <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/Antimateria.jpeg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/Dalopir.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Pablo Cageao Honduvilla</h4>
+                <h4>Daniel "Dalopir" López Piris</h4>
                 <span>Tesorero</span>
               </div>
             </div>
           </div>
 
+        </div>
+        <style>
+          .centrado {
+              text-align: center;
+          }
+        </style>
+        <div class="centrado">
+          <p>
+            <br><br>Así es, somos un 75% Danieles jiji
+          </p>
         </div>
 
       </div>
@@ -370,7 +1139,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">¿Qué temas se tratan en las sesiones?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  De todo, desde algoritmos básicos hasta estructuras de datos avanzadas. Si quieres ver un tema en particular, no dudes en proponérnoslo. Nos adaptaremos a lo que la gente quiera ver.
+                  De todo. Hacemos actividades por el simple hecho de pasarlo bien, concursos, actividades temáticas y, por supuesto, entrenamientos, donde hacemos problemas que seleccionamos para la ocasión y tratamos conceptos concretos, desde algoritmos básicos hasta estructuras de datos avanzadas. Si quieres ver un tema en particular, no dudes en proponérnoslo. Nos adaptaremos a lo que la gente quiera ver.
                 </p>
               </div>
             </li>
@@ -443,10 +1212,11 @@
             <h4>Nuestros enlaces</h4>
             <p>¡Mantente al día a través de los siguientes enlaces!</p>
             <div class="social-links mt-3">
-              <!-- TODO Linkear lo correspondiente a los botones-->
+              <a href="https://discord.gg/vk9wPrYZXH" class="discord"><i class="bx bxl-discord"></i></a>
+              <a href="https://www.instagram.com/ucppm_/" class="instagram"><i class="bx bxl-instagram"></i></a>
               <a href="https://twitter.com/UCppM" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="https://www.instagram.com/ucppm_/" class="github"><i class="bx bxl-instagram"></i></a>
               <a href="https://github.com/ucppm" class="github"><i class="bx bxl-github"></i></a>
+              <a href="https://www.youtube.com/@UCppM" class="youtube"><i class="bx bxl-youtube"></i></a>
             </div>
           </div>
 
@@ -456,7 +1226,7 @@
 
     <div class="container footer-bottom clearfix">
       <div class="copyright">
-        &copy; Copyright <strong><span>2023 UCppM</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>2024 UCppM</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
